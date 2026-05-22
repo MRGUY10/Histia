@@ -8,8 +8,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-body);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +21,125 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), "Space Grotesk", sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display), "Unbounded", sans-serif;
+}
+
+/* Figma heading style for "Cette page arrive bientôt" */
+.figma-heading {
+  font-family: var(--font-display), "Unbounded", sans-serif; /* Font/Family/Heading */
+  font-weight: 600; /* Semi Bold */
+  font-style: normal; /* Semi Bold represented via font-weight */
+  font-size: var(--figma-size-xxl, 2.5rem); /* Font/Size/xxl — adjust fallback as needed */
+  leading-trim: none;
+  line-height: 100%; /* requested 100% */
+  letter-spacing: 0%;
+}
+
+/* Ensure heading color and single-line behavior */
+:root {
+  --figma-heading-color: #A199D2; /* updated H1 color per request */
+}
+
+.figma-heading {
+  color: var(--figma-heading-color);
+  white-space: nowrap; /* keep it one line */
+  display: block; /* align with paragraph block start */
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: 8px;
+}
+
+/* Figma regular style for body fragment */
+.figma-regular {
+  /* Typography / topology: following requested spec */
+  font-family: var(--font-display), "Unbounded", sans-serif; /* Font/Family/Heading */
+  font-weight: 400; /* Regular */
+  font-style: normal; /* Regular */
+  font-size: 24px; /* requested */
+  leading-trim: none;
+  line-height: 32px; /* requested */
+  letter-spacing: 0.02em; /* 2% approx. */
+  color: var(--figma-body-color, #b3acd7);
+}
+
+/* Beta badge typography from Figma */
+.badge-beta {
+  font-family: var(--font-display), "Unbounded", sans-serif; /* Font/Family/Display */
+  font-weight: 500; /* Medium */
+  font-style: normal;
+  font-size: 11px; /* slightly smaller */
+  line-height: 14px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+  color: #E1C3FF;
+  background: rgba(36,22,56,0.6); /* dark purple interior */
+  border: 0.5px solid #E1C3FF;
+  padding: 3px 6px;
+  border-radius: 9999px;
+}
+
+/* Sidebar panel border: 0.6px solid #E1C3FF */
+.sidebar-panel {
+  border: none;
+}
+
+/* Meta pill (PAGE EN CONSTRUCTION) smaller border and text */
+.meta-pill {
+  border: 0.4px solid #E1C3FF;
+  font-size: 9px;
+  line-height: 12px;
+  padding: 2px 8px;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Utility to keep inline fragments on a single line */
+.nowrap-inline {
+  white-space: nowrap;
+  display: inline-block;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.8s ease-out both;
+}
+
+.animate-fade-up-delay {
+  animation: fade-up 0.8s ease-out 0.2s both;
+}
+
+.animate-fade-up-delay-2 {
+  animation: fade-up 0.8s ease-out 0.35s both;
+}
+
+.animate-float {
+  animation: float 4.5s ease-in-out infinite;
 }

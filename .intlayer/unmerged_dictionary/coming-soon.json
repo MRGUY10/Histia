@@ -1,0 +1,66 @@
+[
+  {
+    "key": "coming-soon",
+    "content": {
+      "meta": {
+        "nodeType": "translation",
+        "translation": {
+          "fr": "PAGE EN CONSTRUCTION",
+          "en": "COMING SOON"
+        }
+      },
+      "title": {
+        "nodeType": "translation",
+        "translation": {
+          "fr": "Cette page arrive bientôt",
+          "en": "This page is coming soon"
+        }
+      },
+      "paragraphLine1": {
+        "nodeType": "translation",
+        "translation": {
+          "fr": "Nous sommes encore en version bêta, ⟳ Stolos n'est",
+          "en": "We're still in beta, ⟳ Stolos isn't"
+        }
+      },
+      "paragraphLine2": {
+        "nodeType": "translation",
+        "translation": {
+          "fr": "pas encore complet, notre équipe travaille d'arrache",
+          "en": "fully complete yet — our team is working"
+        }
+      },
+      "paragraphLine3": {
+        "nodeType": "translation",
+        "translation": {
+          "fr": "pied pour vous apporter cette page au plus vite !",
+          "en": "hard to bring this page to you as soon as possible!"
+        }
+      },
+      "cta": {
+        "nodeType": "translation",
+        "translation": {
+          "fr": "Nos nouveautés ici",
+          "en": "See our updates"
+        }
+      },
+      "mascotteSrc": {
+        "nodeType": "translation",
+        "translation": {
+          "fr": "/assets/Mascotte_fr.png",
+          "en": "/assets/Mascotte_anglaise.png"
+        }
+      },
+      "mascotteAlt": {
+        "nodeType": "translation",
+        "translation": {
+          "fr": "Mascotte en construction",
+          "en": "Mascot under construction"
+        }
+      }
+    },
+    "location": "local",
+    "localId": "coming-soon::local::src\\app\\[locale]\\coming-soon\\coming-soon.content.ts",
+    "filePath": "src\\app\\[locale]\\coming-soon\\coming-soon.content.ts"
+  }
+]
