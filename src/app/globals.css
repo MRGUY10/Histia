@@ -90,13 +90,42 @@ body {
 
 /* Meta pill (PAGE EN CONSTRUCTION) smaller border and text */
 .meta-pill {
-  border: 0.4px solid #E1C3FF;
-  font-size: 9px;
-  line-height: 12px;
+  border: 1px solid transparent;
+  background: #BFB9DF1A; /* requested semi-transparent background */
+  font-family: "Font/Family/Display";
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px; /* Font/Size/xs mapped to 12px */
+  leading-trim: none;
+  line-height: 16px;
+  letter-spacing: 0%;
   padding: 2px 8px;
-  letter-spacing: 0.02em;
   display: inline-flex;
   align-items: center;
+}
+
+/* CTA placeholder typography for "Nos nouveautés ici" */
+.cta-placeholder {
+  font-family: "Font/Family/Heading";
+  font-weight: 600;
+  font-style: normal; /* Semi Bold represented via font-weight */
+  font-size: 16px; /* Font/Size/m mapped to 16px */
+  leading-trim: none;
+  line-height: 100%;
+  letter-spacing: 0%;
+  display: inline-flex;
+  align-items: center;
+  color: #E1C3FF; /* make CTA text same color as arrow */
+}
+
+/* CTA arrow color */
+.cta-arrow {
+  color: #E1C3FF;
+}
+
+/* Highlight color for the product name 'Stolos' */
+.stolos-highlight {
+  color: #E3E0F6;
 }
 
 /* Utility to keep inline fragments on a single line */

@@ -7,7 +7,7 @@ const copy: Record<Locale, any> = {
     meta: "PAGE EN CONSTRUCTION",
     title: "Cette page arrive bientôt",
     paragraphs: [
-      "Nous sommes encore en version bêta, ⟳ Stolos n'est",
+      "Nous sommes encore en version bêta, Stolos n'est",
       "pas encore complet, notre équipe travaille d'arrache",
       "pied pour vous apporter cette page au plus vite !",
     ],
@@ -29,6 +29,19 @@ const copy: Record<Locale, any> = {
 
 export default function ComingSoon({ locale }: { locale: Locale }) {
   const t = copy[locale];
+  const renderStolos = (text: string) => {
+    const parts = text.split(/(Stolos)/g);
+    return parts.map((part, i) =>
+      part === "Stolos" ? (
+        <span key={i} className="inline-flex items-center gap-2">
+          <Image src="/assets/logo.png" alt="logo" width={18} height={18} className="object-contain" />
+          <span className="stolos-highlight">Stolos</span>
+        </span>
+      ) : (
+        <span key={i}>{part}</span>
+      )
+    );
+  };
   const navItems = [
     { label: "Tableau" },
     { label: "Liste" },
@@ -104,7 +117,7 @@ export default function ComingSoon({ locale }: { locale: Locale }) {
         <main className="flex-1 px-6 py-10 sm:px-10 lg:px-16 flex items-center">
           <div className="mx-auto grid grid-cols-1 w-full max-w-6xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
           <section className="space-y-6 mx-auto w-full text-center lg:text-left">
-            <div className="meta-pill inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#4b3a76] to-[#6b57a9] uppercase tracking-[0.2em] text-white/90 animate-fade-up">
+                <div className="meta-pill inline-flex items-center gap-2 rounded-full uppercase tracking-[0.2em] text-white/90 animate-fade-up">
               {t.meta}
             </div>
             <h1 className="figma-heading text-2xl sm:text-3xl md:text-4xl leading-tight max-w-[420px] mx-auto lg:mx-0 animate-fade-up-delay">
@@ -112,20 +125,20 @@ export default function ComingSoon({ locale }: { locale: Locale }) {
             </h1>
 
             <p className="text-[18px] sm:text-[20px] md:text-[24px] leading-[28px] sm:leading-[30px] md:leading-[32px] text-[#877EBC] animate-fade-up-delay-2 max-w-[420px] mx-auto lg:mx-0">
-              <span className="whitespace-nowrap">{t.paragraphs[0]}</span>
+              <span className="whitespace-nowrap">{renderStolos(t.paragraphs[0])}</span>
               <br />
-              <span className="whitespace-nowrap">{t.paragraphs[1]}</span>
+              <span className="whitespace-nowrap">{renderStolos(t.paragraphs[1])}</span>
               <br />
-              <span className="whitespace-nowrap">{t.paragraphs[2]}</span>
+              <span className="whitespace-nowrap">{renderStolos(t.paragraphs[2])}</span>
             </p>
 
-            <a
-              className="pointer-events-none inline-flex items-center gap-3 text-base font-semibold text-white/90 transition hover:text-white underline-offset-4 hover:underline animate-fade-up-delay-2"
-              href="#"
+            <span
+              role="link"
               aria-disabled="true"
+              className="inline-flex items-center gap-3 transition animate-fade-up-delay-2 cta-placeholder"
             >
-              <span className="text-xl">→</span> {t.cta}
-            </a>
+              <span className="text-xl cta-arrow">→</span> {t.cta}
+            </span>
           </section>
 
             <div className="relative mx-auto flex w-full items-center justify-center lg:justify-end lg:-mr-30">
