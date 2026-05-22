@@ -120,7 +120,7 @@ export default function ComingSoon({ locale }: { locale: Locale }) {
                 <div className="meta-pill inline-flex items-center gap-2 rounded-full uppercase tracking-[0.2em] text-white/90 animate-fade-up">
               {t.meta}
             </div>
-            <h1 className="figma-heading text-2xl sm:text-3xl md:text-4xl leading-tight max-w-[420px] mx-auto lg:mx-0 animate-fade-up-delay">
+            <h1 className="figma-heading text-2xl sm:text-3xl md:text-4xl leading-tight max-w-[420px] mx-auto lg:mx-0 animate-fade-up-delay mb-10 md:mb-12">
               {t.title}
             </h1>
 

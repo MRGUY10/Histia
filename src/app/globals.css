@@ -109,7 +109,7 @@ body {
   font-family: "Font/Family/Heading";
   font-weight: 600;
   font-style: normal; /* Semi Bold represented via font-weight */
-  font-size: 16px; /* Font/Size/m mapped to 16px */
+  font-size: 20px; /* increased CTA size */
   leading-trim: none;
   line-height: 100%;
   letter-spacing: 0%;
