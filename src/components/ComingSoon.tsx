@@ -124,7 +124,7 @@ export default function ComingSoon({ locale }: { locale: Locale }) {
               {t.title}
             </h1>
 
-            <p className="text-[18px] sm:text-[20px] md:text-[24px] leading-[28px] sm:leading-[30px] md:leading-[32px] text-[#877EBC] animate-fade-up-delay-2 max-w-[420px] mx-auto lg:mx-0">
+              <p className="text-[18px] sm:text-[20px] md:text-[24px] leading-[28px] sm:leading-[30px] md:leading-[32px] text-[#877EBC] animate-fade-up-delay-2 max-w-[420px] mx-auto lg:mx-0 mb-8">
               <span className="whitespace-nowrap">{renderStolos(t.paragraphs[0])}</span>
               <br />
               <span className="whitespace-nowrap">{renderStolos(t.paragraphs[1])}</span>

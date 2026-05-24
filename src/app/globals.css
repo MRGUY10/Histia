@@ -49,7 +49,7 @@ body {
   white-space: nowrap; /* keep it one line */
   display: block; /* align with paragraph block start */
   -webkit-font-smoothing: antialiased;
-  margin-bottom: 8px;
+  margin-bottom: 24px;
 }
 
 /* Figma regular style for body fragment */
@@ -83,6 +83,17 @@ body {
   border-radius: 9999px;
 }
 
+/* Topology typography as requested */
+.topology {
+  font-family: "Font/Family/Display";
+  font-weight: 500;
+  font-style: normal;
+  font-size: var(--font-size-xs, 12px); /* Font/Size/xs */
+  leading-trim: none;
+  line-height: 16px;
+  letter-spacing: 0%;
+}
+
 /* Sidebar panel border: 0.6px solid #E1C3FF */
 .sidebar-panel {
   border: none;
@@ -90,6 +101,13 @@ body {
 
 /* Meta pill (PAGE EN CONSTRUCTION) smaller border and text */
 .meta-pill {
+  box-sizing: border-box;
+  width: 183px;
+  height: 36px;
+  gap: 10px;
+  transform: rotate(0deg);
+  opacity: 1;
+  border-radius: 999px;
   border: 1px solid transparent;
   background: #BFB9DF1A; /* requested semi-transparent background */
   font-family: "Font/Family/Display";
@@ -99,9 +117,14 @@ body {
   leading-trim: none;
   line-height: 16px;
   letter-spacing: 0%;
-  padding: 2px 8px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* Use token variable when available, fallback to 16px */
+  padding-left: var(--espacement-marge, 16px);
+  padding-right: var(--espacement-marge, 16px);
   display: inline-flex;
   align-items: center;
+  justify-content: center;
 }
 
 /* CTA placeholder typography for "Nos nouveautés ici" */
